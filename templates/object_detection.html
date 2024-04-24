@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Title Here</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Object detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -14,21 +14,16 @@
         </a>
         <div class="title-container">
             <h1> Object Detection </h1>
+            <p class="author"> Using You Only Look Once Version 8 (Yolo V8) </p>
         </div>
     </div>
     <div class="singlepage">
         <div class="containers">
                 <div class="input">
                     <div class="video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                        <img src="{{ url_for('video_feed') }}" alt="Video stream" />
                     </div>
                 </div>
-                <div class="output">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                </div>
-        </div>
-        <div class="btn">
-                <button id= "btn" > Start detection </button>
         </div>
     </div>
 </body>

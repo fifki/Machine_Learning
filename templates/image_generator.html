@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Image Generator</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        </head>
+        <body>
+            <div class="header">
+                <a class="homepage" href="/">
+                    <i class="fas fa-home" style="color: black;"></i>
+                </a>
+                <div class="title-container">
+                    <h1> Prompt Image Generator</h1>
+                    <p class="author"> Using Stable Diffusion XL </p>
+                </div>
+            </div>
+
+            <form action="/image_generator" method="POST">
+                <div class="singlepage">
+                    <div class="container_">
+                        {% if prompt %}
+                            <textarea id="inputText" name="prompt" placeholder="What do you want to generate... "> {{prompt}} </textarea>
+                        {% else %}
+                            <textarea id="inputText" name="prompt" placeholder="What do you want to generate... "></textarea>
+                        {% endif %}
+
+                        <div class="btn">
+                            <input type="submit" value="Submit" id= "btn"/>
+                        </div>
+                    </div>
+                </div>
+            </form>                       
+
+            {% if result %}
+
+                <div>
+                    <img src="{{ url_for('static', filename=result)}}"  name='generated_image' id="generated_image">
+
+                    <a href="{{ url_for('static', filename=result) }}"> 
+                        <button id= "download" > Download </button>
+                     </a>
+                    
+                </div>
+
+            {% endif %}
+        </body>
+    </html>

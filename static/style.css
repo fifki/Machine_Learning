@@ -1,27 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+    font-family: 'poppins','sans-serif';
+    box-sizing: border-box;
+    }
+
 body{
-    font-family: 'Lato', sans-serif;
     margin: 10px;
     padding: 10px;
     min-height: 100vh;
-    background: #333;
+    background: white;
 }
 
 .title-container {
-    margin: 10px 0 0;
-    padding: 0;
-    color: #fff;
+    font-size: 15px;
     text-align: center;
-    font-size: 1.5em;
-    
+    padding: 0;
+    color: black;
+    text-align: center;
 }
 .title-container  h1{
-    color: #09aab6;;
+    color: black;
     margin: 0;
-    font-size: 3em; 
+    font-size: 3.5em; 
     text-align: center;
-    
-    font-weight: bold; 
-    text-decoration: underline;
+}
+.title-container  p{
+    color: gray;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.title-container .author{
+    color: rgb(171, 169, 169);
+    font-weight: 600;
+    font-size: 1.2em; 
 }
 
 .container {
@@ -35,7 +47,6 @@ body{
 
 .container .card {
     position: relative;
-    cursor: pointer;
 }
 
 .container .card .face {
@@ -46,7 +57,7 @@ body{
 
 .container .card .face.face1 {
     position: relative;
-    background: #333;
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +66,7 @@ body{
 }
 
 .container .card:hover .face.face1 {
-    background: #09aab6;
+    background: rgb(225, 224, 224);
     transform: translateY(0);
 }
 
@@ -82,7 +93,7 @@ body{
 .container .card .face.face1 .content h3 {
     margin: 10px 0 0;
     padding: 0;
-    color: #fff;
+    color: black;
     text-align: center;
     font-size: 1.5em;
 }
@@ -136,8 +147,8 @@ body{
     width: 100%;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
-    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
 }
 
 .containers { 
@@ -150,29 +161,37 @@ body{
 }
 
 #btn , .btn{
-    margin: 15px 0 0;
+    margin: 0px 0 0;
     display: inline-block;
-    text-decoration: none;
     font-weight: 900;
-    background: #333;
-    color: #09aab6;
+    background: white;
+    color: black;
     padding: 10px 20px;
     border-radius: 25px;
-    font-family: 'Lato', sans-serif;
     justify-content: center;
 }
 .singlepage #btn:hover {
    
-    margin-top: 20px; color: #333;
-    background: #09aab6;
+    color: white;
+    background: gray;
     cursor: pointer;
+}
+
+textarea {
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
 }
 
 
 /**-------------------- image generator ----------------------*/
 .container_ {
     width: 600px;
-    margin: 50px auto;
+    margin: 10px auto;
     text-align: center;
   }
   textarea {
@@ -182,5 +201,33 @@ body{
   }
 
   .image-container {
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
   }
+  #generated_image{
+    width:500px;
+    height:500px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #download {
+    margin: 15px 0 0;
+    font-weight: 900;
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #download:hover {
+   
+    color: white;
+    background: gray;
+    cursor: pointer;
+    }

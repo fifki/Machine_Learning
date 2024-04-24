@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Machine Learning </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
 </head>
 <body>
     <div class="title-container">
         <h1>Machine Learning</h1>
+        <p class="subtitle"> Personal project to learn to deploy computer vision trained models </p>
+        <a href="/" style="color: rgb(85, 85, 85); font-size: 20px; font-weight: bold;" className ="logo"> Fatima Ifkirne </a>
     </div>
     <div class="container">
         <div class="card">
@@ -21,8 +23,8 @@
             </div>
             <div class="face face2">
                 <div class="content">
-                    <p>Object detection in machine learning involves the task of identifying and localizing objects within an image or video </p>
-                    <a href="./Object_detection.html">Live demo </a>
+                    <p>Using You Only Look Once Version 8 (Yolo V8) </p>
+                    <a href="/object_detection">Live demo </a>
                 </div>
             </div>
         </div>
@@ -35,8 +37,8 @@
             </div>
             <div class="face face2">
                 <div class="content">
-                    <p>Image segmentation in machine learning refers to the process of partitioning an image into multiple segments or regions based on certain characteristics</p>
-                        <a href="./Segmentation.html">Live demo </a>
+                    <p>Using Segment Anything Model (SAM)</p>
+                        <a href="/segmentation">Live demo </a>
                 </div>
             </div>
         </div>
@@ -49,8 +51,8 @@
             </div>
             <div class="face face2">
                 <div class="content">
-                    <p>Depth estimation in machine learning involves predicting the distance of objects from a camera or sensor in a scene</p>
-                        <a href="./Depth_est.html">Live demo </a>
+                    <p>Using MiDaS Depth Estimation Model</p>
+                    <a href="/depth_estimation">Live demo </a>
                 </div>
             </div>
         </div>
@@ -64,8 +66,8 @@
             </div>
             <div class="face face2">
                 <div class="content">
-                    <p>Image generation in machine learning refers to the process of creating new images from scratch </p>
-                        <a href="./Image_gener.html">Live demo </a>
+                    <p>Using Stable Diffusion XL</p>
+                        <a href="/image_generator">Live demo </a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depth estimation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <a class="homepage" href="/">
+            <i class="fas fa-home" style="color: black;"></i>
+        </a>
+        <div class="title-container">
+            <h1>Depth estimation </h1>
+            <p class="author"> Using MiDaS Depth Estimation Model </p>
+        </div>
+    </div>
+
+
+    <div class="singlepage">
+        <form method="POST" enctype="multipart/form-data" >
+                <input type="file" name="image"/>
+                <input type="submit" name="Load & Predict" value="Load & Predict">
+        </form>                       
+
+        <div style="margin-top: 32px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 20px;">
+           {% if image %}                 
+            <img src="{{ url_for('static', filename= image) }}"  name='generated_image' width="300px" >
+
+            <img src="{{ url_for('static', filename= depth_image) }}"  name='generated_image' width="300px">
+            {% else %}
+
+            <img src="{{ url_for('static', filename='image.png') }}"  name='generated_image' width="300px" >
+
+            <img src="{{ url_for('static', filename='depth_image.png') }}"  name='generated_image' width="300px">
+
+
+            {% endif %}
+        </div>
+
+    </div>
+</body>
+</html>
