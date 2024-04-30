@@ -1,6 +1,8 @@
 # Machine Learning Model Deployment with Flask
 
 Welcome to the Machine Learning Model Deployment project! This project uses Flask to deploy trained machine learning models, including YOLO (You Only Look Once), MIDAS (Multiple Depth Estimation Accuracy with Single Network), SAM (Segment Anything Module), and Stable Defusion XL
+## 
+![alt text](https://github.com/fifki/Machine_Learning/blob/main/readmepic/Capture%20d'%C3%A9cran%202024-04-30%20022736.png?raw=true) 
 
 ## Overview
 
